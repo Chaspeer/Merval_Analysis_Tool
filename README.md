@@ -35,5 +35,5 @@ Download and unzip contents from https://github.com/Chaspeer/Merval_Analysis_Too
 ###  Launch the app
 
 ```
-streamlit run app.py
+streamlit run merval.py
 ```
