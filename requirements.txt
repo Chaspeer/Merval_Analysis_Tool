@@ -1,0 +1,8 @@
+streamlit 
+pandas
+base64
+matplotlib
+numpy 
+yfinance 
+datetime
+cufflinks
