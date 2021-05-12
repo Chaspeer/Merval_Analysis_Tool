@@ -49,11 +49,17 @@ def load_data():
     del df['.BA']
     #Let's improve the classification
     df = df.replace(to_replace='Petróleo y Gas',value='Energético')
+    df = df.replace(to_replace='Energético',value='Energy')
     df = df.replace(to_replace='Industrial (Aluminio)',value='Industrial')
     df = df.replace(to_replace='Industrial (Siderúrgica)',value='Industrial')
     df = df.replace(to_replace='Inmobiliario-Agropecuario',value='Servicios industriales y otros')
     df = df.replace(to_replace='Fabricación de productos',value='Servicios industriales y otros')
+    df = df.replace(to_replace='Servicios industriales y otros',value='Services')
     df = df.replace(to_replace='Finanzas',value='Financiero')
+    df = df.replace(to_replace='Financiero',value='Finance')
+    df = df.replace(to_replace='Telecomunicaciones',value='Telecommunication')
+    df = df.replace(to_replace='Bancario',value='Bank')
+    df = df.replace(to_replace='Construcción (Cementos)',value='Construction')
     st.cache(allow_output_mutation=True)
     return df
 
@@ -70,8 +76,8 @@ df_selected_sector = df[ (df['Sector'].isin(selected_sector)) ]
 
 # Sidebar
 st.sidebar.subheader('Stock Analysis Parameters')
-start_date = st.sidebar.date_input("Start date", datetime.date(2019, 1, 1))
-end_date = st.sidebar.date_input("End date", datetime.date(2021, 1, 31))
+start_date = st.sidebar.date_input("Start date", datetime.date(2021, 1, 1))
+end_date = st.sidebar.date_input("End date", datetime.date(2021, 3, 31))
 
 # Retrieving tickers data
 ticker_list = df['Símbolo']
