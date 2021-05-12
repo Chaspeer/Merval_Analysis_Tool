@@ -1,5 +1,9 @@
 # Merval_Analysis_Tool
-This is a web app that allow us to analyze different aspects of the Merval Stock Market
+This is a web app that allow us to analyze different aspects of the Merval Stock Market.
+
+You can select a specific sector and take look at all the companies that are included in that group. And also, you can select a specific Stock to look at its information.
+
+You can try the webapp in the following [LINK](https://share.streamlit.io/chaspeer/merval_analysis_tool/main/merval.py) 
 
 # Reproducing this web app 
 To recreate this web app on your own computer, do the following.
